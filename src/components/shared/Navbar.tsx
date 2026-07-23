@@ -1,78 +1,3 @@
-// "use client";
-// import Image from "next/image";
-// import { UserCircleIcon, ShoppingCartIcon } from "@phosphor-icons/react";
-// import Link from "next/link";
-// const Navbar = () => {
-//   return (
-//     <div className="w-full sticky top-0 z-50  flex bg-white/90 backdrop-blur-md border-b border-gray-200 justify-center justify-items-center h-20 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border-b  border-neutral-100">
-//       <div className="flex  justify-between  max-w-[1300px] w-full">
-//         {/* first div */}
-//         <div className="flex gap-32 items-center">
-//           <div className="flex items-center">
-//             <Image
-//               src="/images/logo.png"
-//               alt="Trust Wear"
-//               width={80}
-//               height={80}
-//               priority
-//             />
-//             <div className="flex flex-col relative ">
-//               <h1 className="text-[22px] text-black uppercase font-bold tracking-widest">
-//                 TRUST WEAR
-//               </h1>
-
-//               <span className="text-[9px] uppercase tracking-[0.2em] text-neutral-400">
-//                 Confidence in Every Thread
-//               </span>
-//             </div>
-//           </div>
-//           <div className="flex items-start gap-6">
-//             <Link href="/">
-//               <h1 className="cursor-pointer text-[15px]   font-semibold text-black">
-//                 Home
-//               </h1>
-//             </Link>
-
-//             <Link href="/tshirts">
-//               <h1 className="cursor-pointer text-[15px]   font-semibold text-black ">
-//                 T-Shirts
-//               </h1>
-//             </Link>
-//             <Link href="/shirts">
-//               <h1 className="cursor-pointer text-[15px]   font-semibold  text-black ">
-//                 Shirts
-//               </h1>
-//             </Link>
-
-//             <h1 className="cursor-pointer text-[15px]   font-semibold text-black">
-//               Help & Support
-//             </h1>
-//           </div>
-//         </div>
-
-//         {/* second div  */}
-
-//         <div className="flex items-center gap-4">
-//           <button className="transition  hover:scale-110">
-//             <UserCircleIcon className="w-8 h-8 text-black" />
-//           </button>
-
-//           <button className="relative  transition hover:scale-110">
-//             <ShoppingCartIcon className="w-8 h-8 text-black" />
-
-//             {/* Cart Badge */}
-//             <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-//               2
-//             </span>
-//           </button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Navbar;
-
 "use client";
 import { useState } from "react";
 import Image from "next/image";
@@ -184,12 +109,12 @@ const Navbar = () => {
           {/* mobile menu trigger */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger>
-              <button
+              <div
                 className="lg:hidden transition hover:scale-110"
                 aria-label="Open menu"
               >
                 <ListIcon className="w-7 h-7 text-black" />
-              </button>
+              </div>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] bg-white">
               <div className="flex items-center justify-between mt-2 mb-6">
