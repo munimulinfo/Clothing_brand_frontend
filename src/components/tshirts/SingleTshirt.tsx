@@ -83,7 +83,7 @@ const fadeUp = {
   show: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.06, duration: 0.4, ease: "easeOut" },
+    transition: { delay: i * 0.06, duration: 0.4, ease: "easeOut" as const },
   }),
 };
 
@@ -207,7 +207,7 @@ const SingleTshirt = () => {
                         fill
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
                         alt=""
-                         className="object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-110"
+                        className="object-contain p-6 transition-transform duration-500 ease-out group-hover:scale-110"
                       />
                     </div>
 
@@ -217,7 +217,7 @@ const SingleTshirt = () => {
                     </div>
 
                     <button className="flex w-full items-center justify-center gap-1.5 bg-black py-2.5 text-xs font-semibold text-white transition-colors hover:bg-gray-900">
-                      <Plus size={14} className="text-white" strokeWidth={3}/>
+                      <Plus size={14} className="text-white" strokeWidth={3} />
                       Add to Cart
                     </button>
                   </motion.div>
