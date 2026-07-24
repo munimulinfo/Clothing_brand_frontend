@@ -8,7 +8,6 @@ import {
   UserCircleIcon,
   ShoppingCartIcon,
   ListIcon,
-  XIcon,
 } from "@phosphor-icons/react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -45,7 +44,7 @@ const Navbar = () => {
             />
             <div className="flex flex-col relative">
               <h1 className="text-[16px] sm:text-[19px] lg:text-[22px] text-black uppercase font-bold tracking-widest">
-                TRUST WEAR
+                TRUST <span className="text-emerald-700">WEAR</span>
               </h1>
 
               <span className="hidden sm:block text-[9px] uppercase tracking-[0.2em] text-neutral-400">
@@ -94,17 +93,18 @@ const Navbar = () => {
         {/* second div  */}
         <div className="flex items-center gap-2 sm:gap-4">
           <button className="hidden sm:inline-flex transition hover:scale-110">
-            <UserCircleIcon className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
+            <UserCircleIcon className="w-7 h-7 text-black" />
           </button>
+          <Link href={"/cart"}>
+            <button className="relative transition hover:scale-110">
+              <ShoppingCartIcon className="w-7 h-7 mt-1 text-black" />
 
-          <button className="relative transition hover:scale-110">
-            <ShoppingCartIcon className="w-7 h-7 sm:w-8 sm:h-8 text-black" />
-
-            {/* Cart Badge */}
-            <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
-              2
-            </span>
-          </button>
+              {/* Cart Badge */}
+              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+                5
+              </span>
+            </button>
+          </Link>
 
           {/* mobile menu trigger */}
           <Sheet open={open} onOpenChange={setOpen}>
@@ -116,14 +116,11 @@ const Navbar = () => {
                 <ListIcon className="w-7 h-7 text-black" />
               </div>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] bg-white">
+            <SheetContent side="right" className="w-[280px] bg-white pl-2">
               <div className="flex items-center justify-between mt-2 mb-6">
-                <h1 className="text-[16px] uppercase font-bold tracking-widest text-black">
-                  Trust Wear
+                <h1 className="text-sm uppercase mt-2 font-bold tracking-widest text-black">
+                  TRUST <span className="text-emerald-700">WEAR</span>
                 </h1>
-                <button onClick={() => setOpen(false)} aria-label="Close menu">
-                  <XIcon className="w-5 h-5 text-black" />
-                </button>
               </div>
 
               <div className="flex flex-col gap-1">
@@ -137,7 +134,7 @@ const Navbar = () => {
                     >
                       <h1
                         className={cn(
-                          "cursor-pointer text-[15px] font-semibold py-3 px-2 rounded-lg transition-colors flex items-center gap-2",
+                          "cursor-pointer text-[15px] font-semibold py-2.5 px-2  rounded-l-[6px] transition-colors flex items-center gap-2",
                           active
                             ? "bg-emerald-50 text-emerald-700"
                             : "text-black hover:bg-neutral-100",

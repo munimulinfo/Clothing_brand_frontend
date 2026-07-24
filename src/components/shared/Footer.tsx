@@ -1,168 +1,200 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import {
-  EnvelopeSimple,
+  Mail,
   Phone,
-  FacebookLogo,
-  InstagramLogo,
-  YoutubeLogo,
-  TiktokLogo,
-  PinterestLogo,
-  XLogo,
-} from "@phosphor-icons/react";
+  Users,
+  Clock,
+  ChevronRight,
+  MessageCircle,
+  ShieldCheck,
+} from "lucide-react";
+import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+
+const QUICK_LINKS = [
+  "About Us",
+  "Terms & Conditions",
+  "Privacy Policy",
+  "Return Policy",
+  "FAQs",
+  "Contact Us",
+];
+
+const SOCIALS = [
+  { icon: FaFacebookF, label: "Facebook" },
+  { icon: FaInstagram, label: "Instagram" },
+  { icon: FaTiktok, label: "TikTok", text: "T" },
+  { icon: FaTwitter, label: "X" },
+  { icon: null, label: "Pinterest", text: "P" },
+  { icon: FaYoutube, label: "YouTube" },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-[#575757] text-white mt-20">
-      <div className="mx-auto max-w-7xl py-16">
-        <div className="grid gap-12 lg:grid-cols-[260px_1fr_340px]">
-          {/* LEFT */}
-
-          <div>
-            <Link href="/" className="inline-block">
-              <Image
-                src="/images/logo2.png"
-                width={55}
-                height={55}
-                alt="Trust Wear"
-              />
-            </Link>
-
-            <div className="mt-8 space-y-4 text-[17px] text-gray-200">
-              <Link href="#" className="block hover:text-white">
-                About Trust Wear
-              </Link>
-
-              <Link href="#" className="block hover:text-white">
-                Terms & Conditions
-              </Link>
-
-              <Link href="#" className="block hover:text-white">
-                Privacy Policy
-              </Link>
-
-              <Link href="#" className="block hover:text-white">
-                Return Policy
-              </Link>
-
-              <Link href="#" className="block hover:text-white">
-                FAQs
-              </Link>
-
-              <Link href="#" className="block hover:text-white">
-                Contact Us
-              </Link>
-            </div>
+    <footer className="w-full bg-gray-50 border-t border-gray-200 px-6 pt-12 pb-6 mt-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Brand + links */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <ShieldCheck className="h-7 w-7 text-emerald-600" />
+            <span className="text-lg font-bold tracking-wide text-gray-900">
+              TRUST <span className="text-emerald-600">WEAR</span>
+            </span>
           </div>
-
-          {/* CENTER */}
-
-          <div className="space-y-14">
-            <div>
-              <div className="mb-6 flex items-center gap-3 text-lg font-semibold uppercase">
-                <EnvelopeSimple
-                  size={22}
-                  weight="fill"
-                  className="text-orange-400"
-                />
-                GET SPECIAL DISCOUNTS IN YOUR INBOX
-              </div>
-
-              <div className="flex flex-col gap-3 md:flex-row">
-                <input
-                  type="email"
-                  placeholder="Enter your email..."
-                  className="h-12 flex-1 border-b border-gray-300 bg-transparent outline-none placeholder:text-gray-300"
-                />
-
-                <button className="h-12 rounded bg-[#F4A640] px-7 font-medium transition hover:bg-orange-500">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-
-            <div>
-              <div className="mb-6 flex items-center gap-3 text-lg font-semibold uppercase">
-                <Phone size={22} weight="fill" className="text-orange-400" />
-                FOR ANY HELP YOU MAY CALL US AT
-              </div>
-
-              <div className="space-y-2 text-gray-300">
-                <p>+880 1234-567890</p>
-
-                <p>Customer Support</p>
-
-                <p>Track your order or get help returning an order.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT */}
-
-          <div>
-            <h3 className="mb-6 text-lg font-semibold uppercase">Follow Us</h3>
-
-            <p className="mb-8 text-gray-300">
-              Stay updated on our latest arrivals, exclusive promotions and
-              events.
-            </p>
-
-            <div className="mb-10 flex flex-wrap gap-5">
-              <FacebookLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-
-              <InstagramLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-
-              <TiktokLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-
-              <XLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-
-              <PinterestLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-
-              <YoutubeLogo
-                size={34}
-                className="cursor-pointer hover:text-orange-400"
-              />
-            </div>
-
-            <div className="rounded-xl bg-white p-5 text-black">
-              <div className="flex items-center gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-blue-600 text-white">
-                  <FacebookLogo size={30} weight="fill" />
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">Trust Wear</h4>
-
-                  <p className="text-sm text-gray-500">Follow us on Facebook</p>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
+          <p className="mb-5 text-sm text-gray-500">
+            Where comfort meets confidence.
+          </p>
+          <ul className="space-y-3">
+            {QUICK_LINKS.map((link) => (
+              <li key={link}>
+                <a
+                  href="#"
+                  className="flex items-center gap-1.5 text-sm text-gray-800  font-medium transition-colors hover:text-emerald-700"
+                >
+                  <ChevronRight className="h-3.5 w-3.5 text-emerald-800" />
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Bottom */}
+        {/* Newsletter */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <Mail className="h-5 w-5 text-emerald-600" />
+            <h3 className="text-sm font-bold uppercase tracking-wide text-gray-900">
+              Get Special Discounts
+            </h3>
+          </div>
+          <p className="mb-10 text-sm text-gray-500">
+            Subscribe to get updates about new arrivals and exclusive offers.
+          </p>
+          <form className="flex overflow-hidden rounded-md border border-gray-300">
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              className="w-full px-3 py-2.5 text-sm text-gray-700 outline-none placeholder:text-gray-400"
+            />
+            <button
+              type="submit"
+              className="shrink-0 bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-emerald-700"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
 
-        <div className="mt-16 border-t border-gray-500 pt-6 text-center text-gray-300">
-          © {new Date().getFullYear()} Trust Wear. All Rights Reserved.
+        {/* Contact */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <Phone className="h-5 w-5 text-emerald-600" />
+            <h3 className="text-sm font-bold uppercase tracking-wide text-gray-900">
+              We&apos;re Here to Help
+            </h3>
+          </div>
+          <p className="mb-5 text-sm text-gray-500">
+            Have a question? Our support team is ready to assist you.
+          </p>
+
+          <ul className="space-y-3 text-sm text-gray-700">
+            <li className="flex items-center gap-2">
+              <Phone className="h-4 w-4 text-emerald-600" />
+              <a href="tel:+8801234567890" className="hover:text-emerald-600">
+                +880 1234-567890
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-emerald-600" />
+              <a
+                href="mailto:support@trustwear.com"
+                className="hover:text-emerald-600"
+              >
+                support@trustwear.com
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Clock className="h-4 w-4 text-emerald-600" />
+              Mon - Sat: 10:00 AM - 8:00 PM
+            </li>
+          </ul>
+
+          <a
+            href="#"
+            className="mt-5 inline-flex items-center gap-2 rounded-md border border-emerald-600 px-4 py-2 text-sm font-semibold text-emerald-600 transition-colors hover:bg-emerald-50"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        {/* Follow us */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <Users className="h-5 w-5 text-emerald-600" />
+            <h3 className="text-sm font-bold uppercase tracking-wide text-gray-900">
+              Follow Us
+            </h3>
+          </div>
+          <p className="mb-5 text-sm text-gray-500">
+            Stay updated on our latest arrivals, exclusive promotions and
+            events.
+          </p>
+
+          <div className="mb-5 flex flex-wrap gap-2.5">
+            {SOCIALS.map(({ icon: Icon, label, text }) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-gray-600 transition-colors hover:border-emerald-600 hover:text-emerald-600"
+              >
+                {Icon ? (
+                  <Icon className="h-4 w-4" />
+                ) : (
+                  <span className="text-xs font-bold">{text}</span>
+                )}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3 rounded-lg bg-gray-100 p-3">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-emerald-600">
+              <FaFacebookF className="h-5 w-5 fill-white text-white" />
+            </span>
+            <div className="text-sm">
+              <p className="font-semibold text-gray-900">Trust Wear</p>
+              <p className="text-gray-500">Follow us on Facebook</p>
+              <a
+                href="#"
+                className="inline-flex items-center gap-1 font-semibold text-emerald-600 hover:underline"
+              >
+                Follow Page
+                <ChevronRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex lg:max-w-7xl mx-auto w-full text-sm font-medium text-gray-600   pt-10 justify-center gap-2 items-center">
+        <div>
+          <span>© 2026 Trust Wear. All Rights Reserved.</span>
+          <span className="text-gray-600 ml-2">|</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <a href="#">
+            Sitemap
+          </a>
+          <span className="text-gray-600">|</span>
+          <a href="#">
+            Shipping Policy
+          </a>
+          <span className="text-gray-600">|</span>
+          <a href="#">
+            Size Guide
+          </a>
         </div>
       </div>
     </footer>

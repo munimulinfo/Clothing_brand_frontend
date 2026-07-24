@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SectionHeader from "../common/SectionHeader";
 
 const items = [
   {
@@ -62,25 +63,16 @@ const items = [
 const ExploreCollection = () => {
   return (
     <section>
-      <div className="relative my-10 overflow-hidden rounded-lg px-5 py-5 bg-[linear-gradient(90deg,rgba(254,243,199,0.35)_0%,rgba(254,243,199,0.18)_20%,rgba(255,255,255,0.95)_60%,transparent_100%)]">
-        <div className="relative">
-          <span className="inline-flex rounded-full border border-green-700/20 bg-green-700/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.3em] text-green-800">
-            FEATURED COLLECTION
-          </span>
-
-          <h2 className="mt-5 text-4xl font-bold text-gray-900">
-            Discover our premium collection.
-          </h2>
-
-          <p className="mt-3 text-base leading-7 text-gray-600">
-            Explore thoughtfully crafted apparel made with premium fabrics,
+      <SectionHeader
+        badge="FEATURED COLLECTION"
+        title="Discover our premium collection."
+        description="
+              Explore thoughtfully crafted apparel made with premium fabrics,
             modern fits, and exceptional quality—designed for everyday comfort
-            and timeless style.
-          </p>
-        </div>
-      </div>
+            and timeless style."
+      />
 
-      <div className="grid auto-rows-[220px] grid-cols-1 gap-4 md:grid-cols-4">
+      <div className="grid auto-rows-[220px] w-full grid-cols-2 gap-4 md:grid-cols-4">
         {items.map((item, index) => (
           <motion.div
             key={item.id}

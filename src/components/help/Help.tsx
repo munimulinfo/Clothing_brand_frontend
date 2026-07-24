@@ -106,7 +106,7 @@ const Help = () => {
               <p className="mt-8 max-w-xl text-lg leading-relaxed text-[#F4F1EA]/70">
                 Fieldwork is a small product and research studio. We spend our
                 first week on any project somewhere other than a laptop —
-                talking to the people who'll actually live with what we build.
+                talking to the people wholl actually live with what we build.
               </p>
             </div>
             <div className="lg:col-span-4">
@@ -137,7 +137,7 @@ const Help = () => {
                   I
                 </span>
                 t began with a shared frustration: too many good products were
-                designed in rooms far away from the people who'd use them. Our
+                designed in rooms far away from the people  use them. Our
                 founders had spent years in research and product roles at larger
                 companies, watching the same pattern repeat — a beautiful deck,
                 a rushed build, a launch nobody asked for.
@@ -145,14 +145,14 @@ const Help = () => {
               <p className="mt-6 text-lg leading-relaxed text-[#F4F1EA]/80">
                 So they started Fieldwork with one rule: no project begins at a
                 desk. Five years later, that rule is still the whole method.
-                We've since worked with startups, hospitals, and city
+                 since worked with startups, hospitals, and city
                 governments — different problems, same first step.
               </p>
             </div>
             <div className="lg:col-span-5 lg:pl-8">
               <div className="border-l-2 border-[#4E8C82] pl-6">
                 <p className="font-[family-name:var(--font-display)] text-2xl italic leading-snug text-[#F4F1EA]/90">
-                  &ldquo;We don't design for users. We design with them, sitting
+                  &ldquo;We don design for users. We design with them, sitting
                   in the same room.&rdquo;
                 </p>
                 <p className="mt-4 font-[family-name:var(--font-mono)] text-xs tracking-widest text-[#F4F1EA]/50 uppercase">
@@ -171,7 +171,7 @@ const Help = () => {
             What we hold onto
           </p>
           <h2 className="mt-4 max-w-lg font-[family-name:var(--font-display)] text-3xl leading-tight sm:text-4xl">
-            Four things that don't change project to project.
+            Four things that don change project to project.
           </h2>
 
           <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -196,7 +196,7 @@ const Help = () => {
       <section className="border-b border-[#F4F1EA]/10">
         <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10">
           <p className="font-[family-name:var(--font-mono)] text-xs tracking-[0.2em] text-[#C9A24B] uppercase">
-            Who's here
+             here
           </p>
           <h2 className="mt-4 max-w-lg font-[family-name:var(--font-display)] text-3xl leading-tight sm:text-4xl">
             A small, deliberately small, team.
@@ -240,7 +240,7 @@ const Help = () => {
                 Come work in the field with us.
               </h2>
               <p className="mt-3 max-w-md text-[#F4F1EA]/65">
-                We're always glad to meet people who'd rather ask a good
+                 always glad to meet people  rather ask a good
                 question than ship a fast answer.
               </p>
             </div>

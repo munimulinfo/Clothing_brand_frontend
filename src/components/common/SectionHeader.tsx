@@ -12,9 +12,9 @@ const SectionHeader = ({ badge, title, description }: SectionHeaderProps) => {
           {badge}
         </span>
 
-        <h2 className="mt-5 text-4xl font-bold text-gray-900">{title}</h2>
+        <h2 className="mt-5 lg:text-4xl text-2xl font-bold text-gray-900">{title}</h2>
 
-        <p className="mt-3 max-w-4xl text-base leading-7 text-gray-600">
+        <p className="mt-3 lg:max-w-4xl w-full text-justify lg:text-left  text-base leading-7 text-gray-600">
           {description}
         </p>
       </div>

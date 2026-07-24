@@ -50,6 +50,7 @@ const customerReviews = [
 
 
 const items = [...customerReviews, ...customerReviews];
+
 const Reviews = () => {
   const controls = useAnimationControls();
   const reduceMotion = useReducedMotion();

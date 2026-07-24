@@ -58,11 +58,11 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="mt-10">
+    <section className="lg:mt-10">
       <div className="grid gap-5 lg:grid-cols-[2fr_1fr]">
         {/* Left Carousel */}
 
-        <div className="relative h-[620px] overflow-hidden rounded-[30px]">
+        <div className="relative lg:h-[620px] h-[300px] overflow-hidden lg:rounded-[30px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={slides[current].id}
@@ -125,7 +125,7 @@ const HeroSection = () => {
 
         {/* Right Cards */}
 
-        <div className="grid gap-5">
+        <div className="lg:grid hidden  gap-5">
           {sideCards.map((card, index) => (
             <motion.div
               key={index}

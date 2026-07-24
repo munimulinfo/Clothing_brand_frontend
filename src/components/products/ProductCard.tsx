@@ -24,15 +24,15 @@ const ProductCard = ({
   save,
 }: ProductCardProps) => {
   return (
-    <Card className=" relative overflow-hidden rounded-2xl border-none p-0 transition-all duration-300 hover:-translate-y">
+    <Card className=" relative overflow-hidden lg:rounded-2xl rounded-lg  border-none p-0 transition-all duration-300 hover:-translate-y">
       {discount && (
-        <div className="absolute left-4 top-4 z-20 rounded-sm bg-[#FF3F6C] px-3 py-1 text-xs font-bold text-white shadow">
+        <div className="absolute left-4 top-4 z-20 rounded-sm bg-[#FF3F6C] lg:px-3 px-2 px:py-1 py-0.5 lg:text-xs text-[9px] font-bold text-white shadow">
           -{discount}%
         </div>
       )}
 
       <Link href={`/products/${id}`}>
-        <div className="relative w-full h-78 overflow-hidden bg-[#f8f8f8]">
+        <div className="relative w-full lg:h-78 h-52 overflow-hidden bg-[#f8f8f8]">
           <Image
             src={image}
             alt={title}
@@ -43,17 +43,17 @@ const ProductCard = ({
       </Link>
 
       {/* Content */}
-      <div className="px-4 pb-4">
+      <div className="lg:px-4 px-2 pb-4">
         <h3
-          className={` line-clamp-2 text-[17px] font-normal leading-5  text-black  $`}
+          className={`line-clamp-2 lg:text-[17px] font-normal leading-5  text-black  $`}
         >
           {title} lokk heavy by the way
         </h3>
 
         {/* Save */}
         {save && (
-          <div className="inline-flex items-center gap-1 mt-2 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2 py-0.5 text-[12px] font-semibold text-white">
-            <TagIcon weight="fill" size={14} />
+          <div className="inline-flex items-center gap-1 mt-2 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2  py-0.5 lg:text-[12px] text-[9px] font-semibold text-white">
+            <TagIcon weight="fill" className="lg:text-lg tet-xs" />
             Save ৳{save}
           </div>
         )}
@@ -62,19 +62,19 @@ const ProductCard = ({
         <div className="flex items-end justify-between  ">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-[22px] font-semibold text-black">
+              <span className="lg:text-[22px] text-sm font-semibold text-black">
                 <span className="font-medium text-[16px]">৳</span>
                 {price}
               </span>
 
               {oldPrice && (
-                <span className="text-[12px] text-gray-400 line-through">
+                <span className="lg:text-[12px] text-[9px] text-gray-400 line-through">
                   ৳{oldPrice}
                 </span>
               )}
 
               {discount && (
-                <span className="text-[12px] font-semibold text-[#FF3F6C]">
+                <span className="lg:text-[12px] text-[9px] font-semibold text-[#FF3F6C]">
                   -{discount}%
                 </span>
               )}
@@ -82,8 +82,8 @@ const ProductCard = ({
           </div>
 
           {/* Cart */}
-          <button className="h-12 flex justify-center items-center cursor-pointer w-12 rounded-full bg-black transition hover:scale-110 hover:bg-[#FF3F6C]">
-            <FaCartPlus className="text-[20px] text-white" />
+          <button className="lg:h-12 h-8 flex justify-center items-center cursor-pointer lg:w-12 w-8 rounded-full bg-black transition hover:scale-110 hover:bg-[#FF3F6C]">
+            <FaCartPlus className="lg:text-[20px] text-sm text-white" />
           </button>
         </div>
       </div>

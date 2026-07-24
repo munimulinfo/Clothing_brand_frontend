@@ -6,7 +6,7 @@ import { TshirtCard } from "./TshirtCard";
 
 export function TshirtGrid({ products }: { products: Product[] }) {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+    <div className="grid  grid-cols-2 gap-2 px-2 lg:px-0 lg:gap-4 md:grid-cols-3 lg:grid-cols-4">
       <AnimatePresence mode="popLayout">
         {products.map((p, i) => (
           <motion.div key={p.id} layout exit={{ opacity: 0, scale: 0.95 }}>
