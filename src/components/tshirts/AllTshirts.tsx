@@ -11,6 +11,13 @@ import {
 } from "../ui/input-group";
 import { Search } from "lucide-react";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 const SORTS = ["Popular", "Price: Low to High", "Price: High to Low"] as const;
 
 const AllTshirts = () => {
@@ -47,19 +54,21 @@ const AllTshirts = () => {
 
   return (
     <main>
-      <div className="mx-auto flex max-w-[1400px] gap-6">
-        <Sidebar
-          activeStyles={activeStyles}
-          onToggleStyle={toggleStyle}
-          activeSizes={activeSizes}
-          onToggleSize={toggleSize}
-          onClear={clearAll}
-        />
+      <div className="mx-auto flex max-w-7xl gap-6">
+        <div className="hidden md:block">
+          <Sidebar
+            activeStyles={activeStyles}
+            onToggleStyle={toggleStyle}
+            activeSizes={activeSizes}
+            onToggleSize={toggleSize}
+            onClear={clearAll}
+          />
+        </div>
 
-        <section className="flex-1 pb-10 pt-10 bg-white">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-[#DAD4C6] pb-3">
-            <div>
-              <InputGroup className="max-w-xs rounded-none text-black bg-red-50">
+        <section className="pb-10 lg:pt-10 pt-5 bg-white">
+          <div className="mb-4 flex lg:flex-row flex-col lg:items-center justify-between gap-3 border-b border-[#DAD4C6] pb-3">
+            <div className="lg:pl-0 px-2">
+              <InputGroup className="lg:w-78 w-full h-10 rounded-sm text-black bg-gray-50 focus:border-none">
                 <InputGroupInput placeholder="Search..." />
                 <InputGroupAddon>
                   <Search />
@@ -71,21 +80,57 @@ const AllTshirts = () => {
               </InputGroup>
             </div>
 
-            <div className="flex items-center gap-2">
-              {SORTS.map((s) => (
-                <Button
-                  key={s}
-                  variant={"link"}
-                  onClick={() => setSort(s)}
-                  className={` text-[11px] uppercase tracking-wide transition-colors ${
-                    sort === s
-                      ? "text-[#181818] underline underline-offset-4"
-                      : "text-[#080601] hover:text-[#181818]"
-                  }`}
+            <div className="flex flex-row gap-2 px-2">
+              <Select
+                value={sort}
+                onValueChange={(value) =>
+                  setSort(value as (typeof SORTS)[number])
+                }
+              >
+                <SelectTrigger className="w-full lg:hidden block  border shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
+                  <SelectValue />
+                </SelectTrigger>
+
+                <SelectContent
+                  sideOffset={2}
+                  className="rounded-sm min-w-[188px] min-h-[100px]"
                 >
-                  {s}
-                </Button>
-              ))}
+                  {SORTS.map((item) => (
+                    <SelectItem
+                      key={item}
+                      value={item}
+                      className="text-[11px] uppercase tracking-wide  rounded-none"
+                    >
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <Select
+                value={sort}
+                onValueChange={(value) =>
+                  setSort(value as (typeof SORTS)[number])
+                }
+              >
+                <SelectTrigger className="w-full border lg:w-48 shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
+                  <SelectValue />
+                </SelectTrigger>
+
+                <SelectContent
+                  sideOffset={2}
+                  className="rounded-sm min-w-[188px] min-h-[100px]"
+                >
+                  {SORTS.map((item) => (
+                    <SelectItem
+                      key={item}
+                      value={item}
+                      className="text-[11px] uppercase tracking-wide rounded-none"
+                    >
+                      {item}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
 

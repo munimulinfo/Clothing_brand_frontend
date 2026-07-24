@@ -23,7 +23,7 @@ export function TshirtCard({
       viewport={{ once: true, margin: "-40px" }}
       transition={{ delay: (index % 4) * 0.06, duration: 0.4, ease: "easeOut" }}
       whileHover={{ y: -4 }}
-      className="group relative lg:border   border-[#DAD4C6] bg-white"
+      className="group relative border  lg:rounded-none   border-[#DAD4C6] bg-white"
     >
       {/* swing tag discount */}
       <div className="absolute drop-shadow-xl rounded-r-2xl left-0 top-3 z-10 flex items-center gap-1 bg-[#0C943D] hover:bg-[#0EA845] lg:px-2.5 px-1.5 lg:py-1 py-0.5 text-[#F7F5EE] shadow-sm">
@@ -35,13 +35,13 @@ export function TshirtCard({
           <motion.img
             src={product?.image}
             alt={product?.name}
-            className="h-full w-full object-cover cursor-pointer"
+            className="h-full w-full object-cover cursor-pointer "
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           />
         </Link>
       </div>
-      <div className="border rounded-b-lg lg:rounded-none border-[#DAD4C6] lg:px-2 px-1.5">
+      <div className=" lg:px-2 px-1.5">
         <div className="lg:px-2 px-0.5 py-3.5">
           <h3 className="line-clamp-2 font-semibold  lg:min-h-[2.5rem] min-h-[30px]  lg:text-[14px]  text-[12px] leading-tight tracking-wide text-[#181818]">
             {product?.name}

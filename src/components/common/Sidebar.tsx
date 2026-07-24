@@ -30,7 +30,7 @@ export function Sidebar({ activeStyles, onToggleStyle, onClear }: Props) {
 
   return (
     <aside
-      className={`w-72 hidden md:block lg:shrink-0 p-4 shadow-[0_10px_40px_rgba(0,0,0,0.06)]  sticky bg-white top-20 h-[calc(100vh-5rem)]`}
+      className={`w-72  lg:shrink-0 p-4 shadow-[0_10px_40px_rgba(0,0,0,0.06)]  sticky bg-white top-20 h-[calc(100vh-5rem)]`}
     >
       <div className="sticky pt-6 flex h-full flex-col">
         <div>
