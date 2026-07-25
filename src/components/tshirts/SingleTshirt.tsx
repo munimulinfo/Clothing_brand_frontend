@@ -116,7 +116,7 @@ const SingleTshirt = () => {
   return (
     <main className="min-h-screen bg-white px-2 py-6 text-gray-900 sm:px-8 lg:px-12">
       {/* breadcrumb */}
-      <div className="mx-auto mb-6 flex max-w-7xl flex-wrap items-center gap-1.5 text-xs text-gray-400">
+      <div className="mx-auto mb-6 flex max-w-7xl flex-wrap items-center gap-1.5 lg:text-xs text-[10px] text-gray-400">
         <span className="cursor-pointer hover:text-gray-600">Home</span>
         {product.breadcrumb.map((b, i) => (
           <span key={b} className="flex items-center gap-1.5">
@@ -291,7 +291,7 @@ const SingleTshirt = () => {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-start gap-1 lg:gap-2">
+          <div className="mt-6 flex items-center justify-start gap-2">
             <div className="flex h-12 items-center rounded-lg border border-gray-200">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -312,17 +312,17 @@ const SingleTshirt = () => {
 
             <motion.button
               whileTap={{ scale: 0.97 }}
-              className="flex h-12 w-full max-w-40 items-center justify-center gap-2 rounded-lg bg-gray-900 text-xs font-semibold text-white transition-colors hover:bg-gray-800"
+              className="flex h-12 w-full max-w-40 items-center justify-center gap-2 rounded-lg bg-gray-900 lg:text-xs text-[10px] font-semibold text-white transition-colors hover:bg-gray-800"
             >
-              <FaShoppingCart className="h-4 w-4" />
+              <FaShoppingCart className="lg:h-4 lg:w-4 h-3 w-3" />
               ADD TO CART
             </motion.button>
 
             <motion.button
               whileTap={{ scale: 0.97 }}
-              className="flex h-12 w-full max-w-40 items-center justify-center gap-2 rounded-lg bg-emerald-600 text-xs font-semibold text-white transition-colors hover:bg-emerald-700"
+              className="flex h-12 w-full max-w-40 items-center justify-center gap-2 rounded-lg bg-emerald-600 lg:text-xs text-[10px] font-semibold text-white transition-colors hover:bg-emerald-700"
             >
-              <Zap className="h-4 w-4 fill-white" />
+              <Zap className="lg:h-4 lg:w-4 h-3 w-3 fill-white" />
               BUY NOW
             </motion.button>
           </div>
@@ -585,10 +585,9 @@ const ReturnsExchange = () => {
       </button>
 
       {/* quick facts */}
-      <div className="mt-3 flex flex-wrap items-center  gap-y-2 pl-2">
+      <div className="mt-3 flex lg:flex-row flex-col lg:items-center lg:gap-x-2.5  gap-y-2 pl-2">
         {QUICK_FACTS.map((fact, i) => (
           <span key={fact} className="flex items-center gap-3">
-            {i > 0 && <span className="h-3 w-px bg-gray-200" />}
             <span className="flex items-center gap-1.5 text-[13px] text-gray-600">
               <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
               {fact}

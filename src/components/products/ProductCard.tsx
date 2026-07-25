@@ -53,7 +53,7 @@ const ProductCard = ({
         {/* Save */}
         {save && (
           <div className="inline-flex items-center gap-1 mt-2 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2  py-0.5 lg:text-[12px] text-[9px] font-semibold text-white">
-            <TagIcon weight="fill" className="lg:text-lg tet-xs" />
+            <TagIcon weight="fill" className="lg:text-[13px] tet-xs" />
             Save ৳{save}
           </div>
         )}

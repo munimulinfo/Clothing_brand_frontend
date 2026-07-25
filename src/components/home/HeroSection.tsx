@@ -37,10 +37,6 @@ const sideCards = [
     title: "Performance Polo",
   },
   {
-    image: "/images/tsirtImages/Screenshot_14.png",
-    title: "Oversized Collection",
-  },
-  {
     image: "/images/tsirtImages/Screenshot_15.png",
     title: "Classic Essentials",
   },
@@ -59,7 +55,7 @@ const HeroSection = () => {
 
   return (
     <section className="lg:mt-10">
-      <div className="grid gap-5 lg:grid-cols-[2fr_1fr]">
+      <div className="grid gap-4 lg:grid-cols-[2fr_1fr]">
         {/* Left Carousel */}
 
         <div className="relative  w-full lg:h-[620px] h-[320px]  overflow-hidden lg:rounded-[30px]">
@@ -70,14 +66,14 @@ const HeroSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="absolute inset-0 group"
+              className="group"
             >
               <Image
                 src={slides[current].image}
                 fill
                 priority
                 alt={slides[current].title}
-                className="object-fill transition duration-[4000ms] w-full h-full group-hover:scale-110"
+                className="transition duration-[6000ms] w-full h-full group-hover:scale-110"
               />
             </motion.div>
           </AnimatePresence>
@@ -95,13 +91,11 @@ const HeroSection = () => {
           </div>
         </div>
 
-        
-
         {/* Right Cards */}
 
         {/* Right Cards */}
 
-        <div className="lg:grid hidden  gap-5">
+        <div className="lg:grid hidden  gap-4">
           {sideCards.map((card, index) => (
             <motion.div
               key={index}
@@ -112,7 +106,7 @@ const HeroSection = () => {
               transition={{
                 duration: 0.3,
               }}
-              className="group relative h-[193px] overflow-hidden rounded-[24px] shadow-lg"
+              className="group relative full overflow-hidden rounded-[30px] shadow-lg"
             >
               {/* Image */}
               <Image
@@ -131,14 +125,14 @@ const HeroSection = () => {
               </div>
 
               {/* Content */}
-              <div className="absolute bottom-5 left-5 right-5">
+              <div className="absolute bottom-3 left-5 right-5">
                 <h3 className="text-2xl font-bold text-white">{card.title}</h3>
 
                 <p className="mt-2 text-sm text-white/80">
                   Premium Quality Collection
                 </p>
 
-                <button className="mt-5 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-black opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <button className="mt-3 flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-black opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   Shop Now
                   <ArrowRight size={16} />
                 </button>
