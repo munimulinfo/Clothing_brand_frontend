@@ -114,7 +114,7 @@ const SingleTshirt = () => {
   ];
 
   return (
-    <main className="min-h-screen bg-white px-4 py-6 text-gray-900 sm:px-8 lg:px-12">
+    <main className="min-h-screen bg-white px-2 py-6 text-gray-900 sm:px-8 lg:px-12">
       {/* breadcrumb */}
       <div className="mx-auto mb-6 flex max-w-7xl flex-wrap items-center gap-1.5 text-xs text-gray-400">
         <span className="cursor-pointer hover:text-gray-600">Home</span>
@@ -186,7 +186,7 @@ const SingleTshirt = () => {
               ))}
             </div>
 
-            <div className="mt-14">
+            <div className="mt-14 hidden lg:block">
               <h2 className="mb-3 text-lg font-extrabold text-gray-900">
                 You may also like
               </h2>
@@ -236,7 +236,7 @@ const SingleTshirt = () => {
             {product?.badge}
           </span>
 
-          <h1 className="mt-3 text-2xl font-bold uppercase leading-snug tracking-tight text-gray-900">
+          <h1 className="mt-3 lg:text-2xl text-lg font-bold uppercase leading-snug tracking-tight text-gray-900">
             {product?.name}
           </h1>
 
@@ -258,7 +258,7 @@ const SingleTshirt = () => {
           </div>
 
           <div className="mt-4 flex items-center gap-3">
-            <span className="text-2xl font-bold text-gray-900">
+            <span className="lg:text-2xl text-xl font-bold text-gray-900">
               ৳{product.price}
             </span>
             <span className="text-base text-gray-400 line-through">
@@ -291,7 +291,7 @@ const SingleTshirt = () => {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-start gap-2">
+          <div className="mt-6 flex items-center justify-start gap-1 lg:gap-2">
             <div className="flex h-12 items-center rounded-lg border border-gray-200">
               <button
                 onClick={() => setQty((q) => Math.max(1, q - 1))}

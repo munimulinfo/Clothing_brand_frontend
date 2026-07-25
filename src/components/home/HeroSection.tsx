@@ -7,25 +7,25 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/images/tsirtImages/Screenshot_12.png",
+    image: "/images/heroImages/Webinar (Banner (Landscape)).png",
     title: "Premium Collection",
     subtitle: "Crafted for Everyday Confidence",
   },
   {
     id: 2,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/heroImages/Untitled design (3).png",
     title: "Luxury Polo",
     subtitle: "Minimal Design. Maximum Comfort.",
   },
   {
     id: 3,
-    image: "/images/tsirtImages/Screenshot_15.png",
+    image: "/images/heroImages/Untitled (1280 x 620 px).png",
     title: "New Arrivals",
     subtitle: "Built For Modern Lifestyle.",
   },
   {
     id: 4,
-    image: "/images/tsirtImages/Screenshot_15.png",
+    image: "/images/heroImages/Untitled design (3).png",
     title: "New Arrivals",
     subtitle: "Built For Modern Lifestyle.",
   },
@@ -62,7 +62,7 @@ const HeroSection = () => {
       <div className="grid gap-5 lg:grid-cols-[2fr_1fr]">
         {/* Left Carousel */}
 
-        <div className="relative lg:h-[620px] h-[300px] overflow-hidden lg:rounded-[30px]">
+        <div className="relative  w-full lg:h-[620px] h-[320px]  overflow-hidden lg:rounded-[30px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={slides[current].id}
@@ -77,38 +77,12 @@ const HeroSection = () => {
                 fill
                 priority
                 alt={slides[current].title}
-                className="object-cover transition duration-[6000ms] scale-100 group-hover:scale-110"
+                className="object-fill transition duration-[4000ms] w-full h-full group-hover:scale-110"
               />
-
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
-
-              <div className="absolute left-12 top-1/2 max-w-lg -translate-y-1/2">
-                <div className="mb-6 inline-flex rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md">
-                  <p className="text-xs tracking-[5px] text-white">
-                    TRUST WEAR
-                  </p>
-                </div>
-
-                <h1 className="text-5xl font-bold leading-tight text-white xl:text-6xl">
-                  {slides[current].title}
-                </h1>
-
-                <p className="mt-5 text-lg text-white/80">
-                  {slides[current].subtitle}
-                </p>
-
-                <button className="group mt-10 flex items-center gap-3 rounded-full bg-white px-7 py-4 font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                  Shop Now
-                  <ArrowRight
-                    size={20}
-                    className="transition group-hover:translate-x-1"
-                  />
-                </button>
-              </div>
             </motion.div>
           </AnimatePresence>
 
-          <div className="absolute bottom-8 left-12 z-20 flex gap-3">
+          <div className="absolute bottom-8 lg:left-12 left-24 z-20 flex  gap-3">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -120,6 +94,8 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
+
+        
 
         {/* Right Cards */}
 
@@ -143,7 +119,7 @@ const HeroSection = () => {
                 src={card.image}
                 alt={card.title}
                 fill
-                className="object-cover transition duration-700 group-hover:scale-110"
+                className="object-fill transition duration-700 group-hover:scale-110"
               />
 
               {/* Dark Overlay */}

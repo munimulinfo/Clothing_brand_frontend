@@ -1,7 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import { Sidebar } from "../common/Sidebar";
-import { products } from "@/lib/data";
+import { products, styleFilters } from "@/lib/data";
 import { TshirtGrid } from "./TshirtGrid";
 import { Button } from "../ui/button";
 import {
@@ -24,6 +24,7 @@ const AllTshirts = () => {
   const [activeStyles, setActiveStyles] = useState<string[]>([]);
   const [activeSizes, setActiveSizes] = useState<string[]>([]);
   const [sort, setSort] = useState<(typeof SORTS)[number]>("Popular");
+  const [category, setCategory] = useState("All Tshirt");
 
   const toggleStyle = (v: string) =>
     setActiveStyles((s) =>
@@ -87,13 +88,13 @@ const AllTshirts = () => {
                   setSort(value as (typeof SORTS)[number])
                 }
               >
-                <SelectTrigger className="w-full lg:hidden block  border shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
+                <SelectTrigger className="w-full   border shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
                   <SelectValue />
                 </SelectTrigger>
 
                 <SelectContent
                   sideOffset={2}
-                  className="rounded-sm min-w-[188px] min-h-[100px]"
+                  className="rounded-sm min-w-[188px] min-h-[150px]"
                 >
                   {SORTS.map((item) => (
                     <SelectItem
@@ -107,26 +108,24 @@ const AllTshirts = () => {
                 </SelectContent>
               </Select>
               <Select
-                value={sort}
-                onValueChange={(value) =>
-                  setSort(value as (typeof SORTS)[number])
-                }
+                value={category}
+                onValueChange={(value) => setCategory(value as string)}
               >
-                <SelectTrigger className="w-full border lg:w-48 shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
+                <SelectTrigger className="w-full lg:hidden md:hidden border lg:w-48 shadow rounded-sm text-[11px] uppercase tracking-wide focus:ring-0">
                   <SelectValue />
                 </SelectTrigger>
 
                 <SelectContent
                   sideOffset={2}
-                  className="rounded-sm min-w-[188px] min-h-[100px]"
+                  className="rounded-sm min-w-[188px] min-h-[120px]"
                 >
-                  {SORTS.map((item) => (
+                  {styleFilters.map((item, index) => (
                     <SelectItem
-                      key={item}
-                      value={item}
+                      key={index}
+                      value={item?.value}
                       className="text-[11px] uppercase tracking-wide rounded-none"
                     >
-                      {item}
+                      {item?.value}
                     </SelectItem>
                   ))}
                 </SelectContent>

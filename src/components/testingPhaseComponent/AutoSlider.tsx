@@ -62,7 +62,7 @@ function AutoSlider() {
                 scale: 1.03,
               }}
               transition={{
-                duration: 0.3,
+                duration: 0.25,
               }}
               className="group relative h-[360px] w-[280px] shrink-0 overflow-hidden rounded-[28px] border border-neutral-200 bg-white shadow-[0_18px_40px_rgba(0,0,0,0.08)]"
             >

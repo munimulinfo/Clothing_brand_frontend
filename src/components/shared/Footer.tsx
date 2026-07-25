@@ -177,10 +177,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex lg:max-w-7xl mx-auto w-full text-sm font-medium text-gray-600   pt-10 justify-center gap-2 items-center">
-        <div>
+      <div className="flex lg:flex-row flex-col   lg:max-w-7xl mx-auto w-full text-sm font-medium text-gray-600   pt-10 justify-center gap-2 items-center">
+        <div className="flex">
           <span>© 2026 Trust Wear. All Rights Reserved.</span>
-          <span className="text-gray-600 ml-2">|</span>
+          <span className="text-gray-600 ml-2 lg:flex hidden">|</span>
         </div>
 
         <div className="flex items-center gap-2">
