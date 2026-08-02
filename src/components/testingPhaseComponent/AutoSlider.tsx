@@ -22,7 +22,7 @@ function AutoSlider() {
         <motion.div
           key={index}
           whileHover={{ y: -2 }}
-            style={{ filter: "drop-shadow(0 10px 20px rgba(20,30,20,0.10))" }}
+          style={{ filter: "drop-shadow(0 10px 20px rgba(20,30,20,0.10))" }}
           className="group relative  w-[300px] rounded-3xl shrink-0"
         >
           {/* accent sliver */}
@@ -47,26 +47,30 @@ function AutoSlider() {
                 draggable={false}
                 className="object-cover transition-transform h-full w-full duration-700 group-hover:scale-105"
               />
-{/* 
+              {/* 
               <span className="absolute bottom-4 right-4 rounded-full bg-white px-3 py-1.5 text-[10.5px] font-bold tracking-wide text-[#10151C] shadow-md">
                 NEW ARRIVAL
               </span> */}
             </div>
 
             <div className="flex flex-col  w-full gap-2 px-5 py-5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#0D2B18]">
-                Best Seller
-              </span>
-              <h3 className="text-[23px] font-bold -tracking-[0.01em] text-[#10151C]">
+              <div className="flex  justify-between">
+                <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#0D2B18]">
+                  Best Seller
+                </span>
+                <div className="flex items-center -mt-1 gap-2">
+                  <span className="text-[17px] tracking-wider text-[#F3B518]">
+                    ★★★★★
+                  </span>
+                  <span className="text-[13px] text-[#9CA0A3]">(42)</span>
+                </div>
+              </div>
+
+              <h3 className="text-[18px] font-bold -tracking-[0.01em] text-[#10151C]">
                 Oversized Tee
               </h3>
-              <div className="flex items-center gap-2">
-                <span className="text-[17px] tracking-wider text-[#F3B518]">
-                  ★★★★★
-                </span>
-                <span className="text-[13px] text-[#9CA0A3]">(42)</span>
-              </div>
-              <div className="mt-0.5 flex items-end gap-2.5">
+
+              <div className="mt-0.5 flex mb-12 items-end gap-2.5">
                 <span className="text-[23px] font-extrabold text-[#0D2B18]">
                   ৳790
                 </span>
@@ -74,13 +78,13 @@ function AutoSlider() {
                   ৳990
                 </span>
               </div>
-              <p className="mt-0.5 text-[12.5px] text-[#62766C]">
+              <p className="absolute bottom-2 text-[12.5px] text-[#62766C]">
                 Premium Cotton • Oversized Fit
               </p>
             </div>
           </div>
 
-          <button className="absolute -right-1  bottom-3 z-30 flex h-[60px] w-[60px] items-center justify-center rounded-full border-4 border-white bg-[#0D2B18]  transition hover:scale-110 hover:bg-[#16391F]">
+          <button className="absolute -right-1  -bottom-0.5 z-30 flex h-[60px] w-[60px] items-center justify-center rounded-full border-4 border-white bg-[#0D2B18]  transition hover:scale-110 hover:bg-[#16391F]">
             <FaCartPlus className="text-lg text-white" />
           </button>
         </motion.div>

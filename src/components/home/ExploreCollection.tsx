@@ -82,7 +82,7 @@ const ExploreCollection = () => {
             and timeless style."
       />
 
-      <div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 mt-10 mb-4">
+      <div className="grid w-full grid-cols-2 md:gap-4 gap-2 md:px-0 px-1 md:grid-cols-4 mt-10 mb-4">
         {items.map((item, index) => (
           <motion.div
             key={index}
@@ -143,7 +143,7 @@ const ExploreCollection = () => {
 
               <div className="flex items-center justify-between pt-2 border-t border-slate-100">
                 <span className="text-base font-extrabold text-slate-900">
-                  ${600}
+                   ৳990
                 </span>
                 {/* Desktop & Tablet */}
                 <motion.button
