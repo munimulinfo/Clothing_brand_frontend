@@ -25,8 +25,8 @@ const FeaturedProducts = () => {
         "
       />
 
-      <section className="mt-10">
-        <div className="grid gap-5 lg:grid-cols-[430px_1fr]">
+      <section className="mt-10  px-2">
+        <div className="grid gap-5  lg:grid-cols-[430px_1fr]">
           {/* LEFT BIG IMAGE */}
 
           <motion.div
@@ -79,7 +79,7 @@ const FeaturedProducts = () => {
         </div>
       </section>
       {/* sirt gallary  */}
-      <section className="mt-5">
+      <section className="mt-5  px-2">
         <div className="grid gap-5 lg:grid-cols-[430px_1fr]">
           {/* LEFT BIG IMAGE */}
 

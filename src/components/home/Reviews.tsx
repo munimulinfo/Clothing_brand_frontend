@@ -99,7 +99,7 @@ const Reviews = () => {
                 scale: 1.02,
               }}
               transition={{ duration: 0.25 }}
-              className="flex w-100  shrink-0 flex-col rounded-3xl border border-green-100 bg-gradient-to-br from-white via-white to-green-50 p-7 shadow-md transition-all hover:border-green-300 hover:shadow-2xl"
+              className="flex lg:w-100 w-80  shrink-0 flex-col rounded-3xl border border-green-100 bg-gradient-to-br from-white via-white to-green-50 p-7 shadow-md transition-all hover:border-green-300 hover:shadow-2xl"
             >
               {/* Rating */}
               <div className="flex items-center justify-between">
@@ -124,23 +124,23 @@ const Reviews = () => {
               </div>
 
               {/* Review */}
-              <p className="mt-6 flex-1 text-[15px] leading-7 text-gray-600">
-                {review.review}
+              <p className="mt-6 flex-1 lg:text-[15px] text-[10px] lg:leading-7 leading-4 text-gray-600">
+                {review?.review}
               </p>
 
               {/* Footer */}
               <div className="flex items-center pt-5 justify-between border-t border-gray-200  ">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-green-600 to-emerald-500 text-white shadow-lg">
+                  <div className="flex lg:h-14 lg:w-14 h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-600 to-emerald-500 text-white shadow-lg">
                     <UserRound size={28} />
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="font-semibold  text-gray-900">
                       {review.name}
                     </h4>
 
-                    <p className="text-sm text-gray-500">{review.role}</p>
+                    <p className="text-sm text-gray-500">{review?.role}</p>
                   </div>
                 </div>
 

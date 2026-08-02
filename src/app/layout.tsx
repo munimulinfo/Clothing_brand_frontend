@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto } from "next/font/google";
+import { Montserrat, Roboto,Manrope } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -9,6 +9,12 @@ const montserrat = Montserrat({
 export const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -55,25 +55,34 @@ const HeroSection = () => {
 
   return (
     <section className="lg:mt-10">
-      <div className="grid gap-4 lg:grid-cols-[2fr_1fr]">
+      <div className="grid gap-4 lg:grid-cols-[3fr_1fr]">
         {/* Left Carousel */}
 
-        <div className="relative  w-full lg:h-[620px] h-[320px]  overflow-hidden lg:rounded-[30px]">
-          <AnimatePresence mode="wait">
+        <div className="relative  w-full  lg:h-[620px] h-[320px]  overflow-hidden lg:rounded-4xl">
+          <AnimatePresence mode="sync">
             <motion.div
               key={slides[current].id}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.6 }}
-              className="group"
+              className="absolute inset-0"
+              initial={{
+                x: "100%",
+              }}
+              animate={{
+                x: "0%",
+              }}
+              exit={{
+                x: "-100%",
+              }}
+              transition={{
+                duration: 0.4,
+                ease: [0.22, 1, 0.36, 1],
+              }}
             >
               <Image
                 src={slides[current].image}
+                alt={slides[current].title}
                 fill
                 priority
-                alt={slides[current].title}
-                className="transition duration-[6000ms] w-full h-full group-hover:scale-110"
+                className="object-fill"
               />
             </motion.div>
           </AnimatePresence>

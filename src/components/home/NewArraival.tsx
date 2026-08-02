@@ -22,7 +22,7 @@ const NewArraival = () => {
             timeless style, and unmatched quality."
       />
 
-      <div className="mt-6 grid lg:grid-cols-4 grid-cols-2 lg:gap-4 gap-2 px-2">
+      <div className="mt-6 grid lg:grid-cols-4 grid-cols-2 lg:gap-6 gap-2  px-2">
         {sliderImages?.map((image, index) => (
           <ProductCard
             key={image}
