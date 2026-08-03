@@ -9,63 +9,63 @@ import { FaCartPlus } from "react-icons/fa";
 const items = [
   {
     id: 1,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Off-Shoulder Edit",
   },
   {
     id: 2,
-    image: "/images/tsirtImages/Screenshot_15.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Classic Fit",
   },
   {
     id: 3,
-    image: "/images/tsirtImages/Screenshot_16.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Luxury Collection",
   },
   {
     id: 4,
-    image: "/images/tsirtImages/Screenshot_17.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "New Arrival",
   },
   {
     id: 5,
-    image: "/images/tsirtImages/Screenshot_18.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Featured",
   },
 
   {
     id: 6,
-    image: "/images/tsirtImages/Screenshot_12.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Oversized Tee",
   },
   {
     id: 7,
-    image: "/images/tsirtImages/Screenshot_13.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Premium Shirt",
   },
   {
     id: 8,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Shop Collection",
   },
   {
     id: 9,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Shop Collection",
   },
   {
     id: 10,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Shop Collection",
   },
   {
     id: 11,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Shop Collection",
   },
   {
     id: 12,
-    image: "/images/tsirtImages/Screenshot_14.png",
+    image: "/images/tsirtImages/nissan2.jpg",
     title: "Shop Collection",
   },
 ];
@@ -112,7 +112,9 @@ const ExploreCollection = () => {
                 title="Virtual Try-On"
                 className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-md text-slate-700 md:p-2 p-1 rounded-full shadow-md hover:bg-white hover:text-emerald-600 transition-colors"
               >
-                <Heart className={`md:w-4 md:h-4 w-2.5 h-2.5 transition-colors text-slate-600`} />
+                <Heart
+                  className={`md:w-4 md:h-4 w-2.5 h-2.5 transition-colors text-slate-600`}
+                />
               </button>
 
               {/* Quick Actions Hover Glass Bar */}
@@ -141,9 +143,6 @@ const ExploreCollection = () => {
 
                 <h3 className="md:text-[16px] text-[10px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-600 transition-colors">
                   Men's premium t-shirt-Drop shoulder
-                </h3>
-                <h3 className="md:text-[10px] text-[7px] font-semibold text-slate-800 mb-2 uppercase line-clamp-2 mt-2 ">
-                 100% cotton, relaxed fit, machine washable
                 </h3>
               </div>
 

@@ -1,12 +1,12 @@
 "use client";
 const sliderImages = [
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
+ "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
 ];
 import ProductCard from "../products/ProductCard";
 import SectionHeader from "../common/SectionHeader";

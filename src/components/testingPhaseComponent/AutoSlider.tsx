@@ -6,13 +6,13 @@ import { FaCartPlus, FaFire } from "react-icons/fa";
 import { Zap } from "lucide-react";
 
 const reviews = [
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
-  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
+  "/images/tsirtImages/nissan2.jpg",
 ];
 
 function AutoSlider() {
