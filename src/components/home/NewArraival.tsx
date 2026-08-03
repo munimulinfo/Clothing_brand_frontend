@@ -1,13 +1,12 @@
 "use client";
 const sliderImages = [
-  "/images/tsirtImages/tsirt01.png",
-  "/images/tsirtImages/Screenshot_12.png",
-  "/images/tsirtImages/Screenshot_13.png",
-  "/images/tsirtImages/Screenshot_14.png",
-  "/images/tsirtImages/Screenshot_15.png",
-  "/images/tsirtImages/Screenshot_16.png",
-  "/images/tsirtImages/Screenshot_17.png",
-  "/images/tsirtImages/Screenshot_18.png",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
+  "/images/tsirtImages/nissan12.jpeg",
 ];
 import ProductCard from "../products/ProductCard";
 import SectionHeader from "../common/SectionHeader";
@@ -25,8 +24,8 @@ const NewArraival = () => {
       <div className="mt-6 grid lg:grid-cols-4 grid-cols-2 lg:gap-6 gap-2  px-2">
         {sliderImages?.map((image, index) => (
           <ProductCard
-            key={image}
-            id={`${index + 1}`}
+            key={String(index)}
+            id={String(index)}
             title={`Premium T-Shirt ${index + 1}`}
             image={image}
             price={1090}

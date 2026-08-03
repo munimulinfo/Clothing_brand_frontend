@@ -10,7 +10,7 @@ const items = [
   {
     id: 1,
     image: "/images/tsirtImages/Screenshot_14.png",
-    title: "Premium Polo",
+    title: "Off-Shoulder Edit",
   },
   {
     id: 2,
@@ -90,10 +90,10 @@ const ExploreCollection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -6 }}
-            className="group relative bg-white rounded-3xl p-4 border border-slate-100 shadow-sm hover:shadow-xl hover:border-slate-200/80 transition-all duration-300 flex flex-col justify-between"
+            className="group relative bg-white md:rounded-3xl p-0 rounded-xl md:p-4 border border-slate-100 shadow-sm hover:shadow-xl hover:border-slate-200/80 transition-all duration-300 flex flex-col justify-between"
           >
             {/* Image Frame */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-slate-100">
+            <div className="relative aspect-[4/5] w-full overflow-hidden md:rounded-2xl rounded-t-xl bg-slate-100">
               <Image
                 src={item.image}
                 fill
@@ -124,27 +124,44 @@ const ExploreCollection = () => {
             </div>
 
             {/* Product Details */}
-            <div className="mt-4 flex flex-col gap-2 flex-grow justify-between">
+            <div className="mt-4 md:p-0 p-2 flex flex-col gap-2 flex-grow justify-between">
               <div>
                 <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-                  <span className="flex items-center gap-1 text-amber-500 font-medium">
+                  <span className="flex items-center gap-0.5 md:gap-1 text-amber-500 font-medium">
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    {500} <span className="text-slate-400">({20})</span>
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   </span>
-                  <span className="text-[11px] text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md font-medium">
+                  <span className="md:text-[11px] text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 md:rounded-md rounded-[4px] font-medium">
                     {500} viewing
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold text-slate-800 line-clamp-1 group-hover:text-emerald-600 transition-colors">
-                  {item.title}
+                <h3 className="md:text-[16px] text-[13px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-600 transition-colors">
+                  Men's premium t-shirt-Drop shoulder
+                </h3>
+                <h3 className="md:text-[10px] text-[8px] font-semibold text-slate-800 mb-2 uppercase line-clamp-2 mt-2 ">
+                 100% cotton, relaxed fit, machine washable
                 </h3>
               </div>
 
               <div className="flex items-center justify-between pt-2 border-t border-slate-100">
-                <span className="text-base font-extrabold text-slate-900">
-                   ৳990
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-md font-extrabold text-slate-900">
+                    ৳990
+                  </span>
+
+                  <span className="lg:text-[12px] font-semibold text-[9px] text-gray-400 line-through">
+                    ৳{700}
+                  </span>
+
+                  <span className="lg:text-[12px] text-[9px] font-semibold text-[#FF3F6C]">
+                    -{23}%
+                  </span>
+                </div>
+
                 {/* Desktop & Tablet */}
                 <motion.button
                   whileTap={{ scale: 0.96 }}
