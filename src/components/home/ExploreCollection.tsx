@@ -93,7 +93,7 @@ const ExploreCollection = () => {
             className="group relative bg-white md:rounded-3xl p-0 rounded-xl md:p-4 border border-slate-100 shadow-sm hover:shadow-xl hover:border-slate-200/80 transition-all duration-300 flex flex-col justify-between"
           >
             {/* Image Frame */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden md:rounded-2xl rounded-t-xl bg-slate-100">
+            <div className="relative md:h-[300px] h-[180px] w-full overflow-hidden md:rounded-2xl rounded-t-xl bg-slate-100">
               <Image
                 src={item.image}
                 fill
@@ -103,16 +103,16 @@ const ExploreCollection = () => {
 
               {/* Badge */}
 
-              <span className="absolute top-3 left-3 z-10 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-medium tracking-wider uppercase px-3 py-1 rounded-full border border-white/20">
+              <span className="absolute top-3 left-3 z-10 bg-slate-900/80 backdrop-blur-md text-white md:text-[11px] text-[8px]  font-medium tracking-wider uppercase px-3 py-1 rounded-full border border-white/20">
                 Sale
               </span>
 
               {/* AR Virtual Try-On Icon Button */}
               <button
                 title="Virtual Try-On"
-                className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-md text-slate-700 p-2 rounded-full shadow-md hover:bg-white hover:text-emerald-600 transition-colors"
+                className="absolute top-3 right-3 z-10 bg-white/80 backdrop-blur-md text-slate-700 md:p-2 p-1 rounded-full shadow-md hover:bg-white hover:text-emerald-600 transition-colors"
               >
-                <Heart className={`w-4 h-4 transition-colors text-slate-600`} />
+                <Heart className={`md:w-4 md:h-4 w-2.5 h-2.5 transition-colors text-slate-600`} />
               </button>
 
               {/* Quick Actions Hover Glass Bar */}
@@ -126,7 +126,7 @@ const ExploreCollection = () => {
             {/* Product Details */}
             <div className="mt-4 md:p-0 p-2 flex flex-col gap-2 flex-grow justify-between">
               <div>
-                <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <div className="flex items-center justify-between  text-slate-500 mb-1">
                   <span className="flex items-center gap-0.5 md:gap-1 text-amber-500 font-medium">
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
@@ -134,15 +134,15 @@ const ExploreCollection = () => {
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                   </span>
-                  <span className="md:text-[11px] text-[10px] text-emerald-600 bg-emerald-50 px-2 py-0.5 md:rounded-md rounded-[4px] font-medium">
+                  <span className="md:text-[11px] text-[8px] text-emerald-600 bg-emerald-50 px-2 py-0.5 md:rounded-md rounded-[4px] font-medium">
                     {500} viewing
                   </span>
                 </div>
 
-                <h3 className="md:text-[16px] text-[13px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-600 transition-colors">
+                <h3 className="md:text-[16px] text-[10px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-600 transition-colors">
                   Men's premium t-shirt-Drop shoulder
                 </h3>
-                <h3 className="md:text-[10px] text-[8px] font-semibold text-slate-800 mb-2 uppercase line-clamp-2 mt-2 ">
+                <h3 className="md:text-[10px] text-[7px] font-semibold text-slate-800 mb-2 uppercase line-clamp-2 mt-2 ">
                  100% cotton, relaxed fit, machine washable
                 </h3>
               </div>

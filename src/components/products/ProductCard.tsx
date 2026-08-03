@@ -50,21 +50,21 @@ const ProductCard = ({
         {/* Content */}
         <div className="lg:px-4 px-2 pb-4">
           <h3
-            className={`line-clamp-2 lg:text-[17px] md:text-[17px] lg:mb-3 mb-2 font-semibold text-[12px] leading-5  text-black  $`}
+            className={`line-clamp-2  md:text-[17px] lg:mb-2 font-semibold text-[10px] leading-5  text-black  $`}
           >
             {title} Premium
           </h3>
 
           {/* Save */}
           {save && (
-            <div className="inline-flex items-center gap-1 mt-2 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2  py-0.5 lg:text-[12px] text-[9px] font-semibold text-white">
+            <div className="inline-flex items-center gap-1 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2 mt-1  py-0.5 lg:text-[12px] text-[9px] font-semibold text-white">
               <TagIcon weight="fill" className="lg:text-[13px] tet-xs" />
               Save ৳{save}
             </div>
           )}
 
           {/* Price */}
-          <div className="flex items-end justify-between  ">
+          <div className="flex items-end justify-between">
             <div>
               <div className="flex items-center gap-2">
                 <span className="lg:text-[22px] text-sm font-semibold text-black">
