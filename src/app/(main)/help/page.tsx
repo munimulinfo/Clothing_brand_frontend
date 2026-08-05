@@ -1,11 +1,9 @@
 import Help from "@/components/help/Help";
 
-const page = () => {
+export default function HelpSupportPage() {
   return (
-    <div>
+    <main className="bg-white">
       <Help />
-    </div>
+    </main>
   );
-};
-
-export default page;
+}

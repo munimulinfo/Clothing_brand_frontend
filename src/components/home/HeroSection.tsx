@@ -7,25 +7,25 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/images/heroImages/Webinar (Banner (Landscape)).png",
+    image: "/images/heroImages/heroImage1.png",
     title: "Premium Collection",
     subtitle: "Crafted for Everyday Confidence",
   },
   {
     id: 2,
-    image: "/images/heroImages/Untitled design (3).png",
+    image: "/images/heroImages/heroImage1.png",
     title: "Luxury Polo",
     subtitle: "Minimal Design. Maximum Comfort.",
   },
   {
     id: 3,
-    image: "/images/heroImages/Untitled (1280 x 620 px).png",
+    image: "/images/heroImages/heroImage1.png",
     title: "New Arrivals",
     subtitle: "Built For Modern Lifestyle.",
   },
   {
     id: 4,
-    image: "/images/heroImages/Untitled design (3).png",
+    image: "/images/heroImages/heroImage1.png",
     title: "New Arrivals",
     subtitle: "Built For Modern Lifestyle.",
   },

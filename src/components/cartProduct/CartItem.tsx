@@ -19,7 +19,7 @@ const initialItems = [
   {
     id: "1",
     name: "Men's Performance Track Trouser — StormFit",
-    availableSizes: ["S", "M", "L", "XL", "XXL"],
+    availableSizes: [ "M", "L", "XL", "XXL"],
     size: "XL",
     qty: 2,
     originalPrice: 1010,
@@ -28,7 +28,7 @@ const initialItems = [
   {
     id: "2",
     name: "Teens Everyday Pajama — Cloud White",
-    availableSizes: ["S", "M", "L", "XL"],
+    availableSizes: ["M", "L", "XL"],
     size: "L",
     qty: 1,
     originalPrice: 1100,
@@ -64,7 +64,7 @@ const CartItem = () => {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-10">
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_360px]">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_500px]">
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
             <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-700">
