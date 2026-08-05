@@ -12,11 +12,16 @@ const sliderImages = [
 ];
 
 import { motion } from "framer-motion";
+import { Geist } from "next/font/google";
 import Image from "next/image";
 
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 const FeaturedProducts = () => {
   return (
-    <div>
+    <div className={manrope.className}>
       <SectionHeader
         badge="Trust Wear"
         title="Where comfort meets confidence."

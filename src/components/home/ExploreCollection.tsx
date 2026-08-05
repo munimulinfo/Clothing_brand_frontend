@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "../common/SectionHeader";
 import { Eye, Glasses, Heart, ShoppingBag, Star } from "lucide-react";
 import { FaCartPlus } from "react-icons/fa";
+import { Geist } from "next/font/google";
 
 const items = [
   {
@@ -70,9 +71,14 @@ const items = [
   },
 ];
 
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 const ExploreCollection = () => {
   return (
-    <section>
+    <section className={manrope.className}>
       <SectionHeader
         badge="FEATURED COLLECTION"
         title="Discover our premium collection."
@@ -141,8 +147,8 @@ const ExploreCollection = () => {
                   </span>
                 </div>
 
-                <h3 className="md:text-[16px] text-[10px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-600 transition-colors">
-                  Men's premium t-shirt-Drop shoulder
+                <h3 className="md:text-[16px] text-[10px] font-bold text-slate-800 line-clamp-2 mt-2 group-hover:text-emerald-700 transition-colors">
+                  Men&apos;s premium t-shirt-Drop shoulder
                 </h3>
               </div>
 

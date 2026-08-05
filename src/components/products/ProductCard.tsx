@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
+import { Geist } from "next/font/google";
 import { TagIcon } from "@phosphor-icons/react/dist/ssr";
 import { FaCartPlus } from "react-icons/fa";
 import { useState } from "react";
@@ -16,6 +17,11 @@ interface ProductCardProps {
   save?: number;
 }
 
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 const ProductCard = ({
   id,
   title,
@@ -29,10 +35,15 @@ const ProductCard = ({
 
   return (
     <>
-      <Card className=" relative overflow-hidden lg:rounded-[28px] rounded-lg  border-none p-0 transition-all duration-300 hover:-translate-y">
+      <Card
+        className={
+          manrope.className +
+          " relative overflow-hidden lg:rounded-[28px] rounded-lg  border-none p-0 transition-all duration-300 hover:-translate-y"
+        }
+      >
         {discount && (
-          <div className="absolute left-4 top-4 z-20 rounded-sm bg-[#FF3F6C] lg:px-3 px-2 px:py-1 py-0.5 lg:text-xs text-[9px] font-bold text-white shadow">
-            -{discount}%
+          <div className="absolute left-4 top-4 z-20 rounded-sm bg-emerald-700 lg:px-3 px-2 px:py-1 py-1 lg:text-[10px] text-[9px] font-bold text-white shadow">
+            NEW
           </div>
         )}
 
@@ -57,33 +68,34 @@ const ProductCard = ({
 
           {/* Save */}
           {save && (
-            <div className="inline-flex items-center gap-1 rounded-sm bg-[#0C943D] hover:bg-[#0EA845] px-2 mt-1  py-1 lg:text-[12px] text-[9px] font-semibold text-white">
-              <TagIcon weight="fill" className="lg:text-[13px] tet-xs" />
+            <div className="inline-flex items-center gap-1 rounded-sm md:mt-1 md:mb-0 mt-2 mb-1 bg-emerald-700 hover:bg-emerald-600 px-2   py-1 md:text-[12px] text-[8px] font-semibold text-white">
+              <TagIcon weight="fill" className="md:text-[13px] tet-[10px]" />
               Save ৳{save}
             </div>
           )}
 
           {/* Price */}
           <div className="flex items-end justify-between">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="lg:text-[22px] text-sm font-semibold text-black">
-                  <span className="font-medium text-[16px]">৳</span>
-                  {price}
+            <div className="flex items-center gap-2">
+              <span className="lg:text-[22px] text-lg font-extrabold text-black">
+                <span className="font-extrabold text-[16px]">৳</span>
+                {price}
+              </span>
+
+              {oldPrice && (
+                <span className="lg:text-[12px] md:mt-1 mt-0.5 text-[9px] text-gray-400 line-through">
+                  ৳{oldPrice}
                 </span>
+              )}
 
-                {oldPrice && (
-                  <span className="lg:text-[12px] text-[9px] text-gray-400 line-through">
-                    ৳{oldPrice}
-                  </span>
-                )}
-
-                {discount && (
-                  <span className="lg:text-[12px] text-[9px] font-semibold text-[#FF3F6C]">
-                    -{discount}%
-                  </span>
-                )}
-              </div>
+              {discount && (
+                <div className=" md:rounded-sm rounded-[3px] bg-[#FF3F6C] md:px-3 px-1.5 px:py-1 py-0.5 lg:text-xs text-[8px] font-bold text-white shadow">
+                  -{discount}%
+                </div>
+                // <span className="lg:text-[12px] mt-1 text-[9px] font-semibold text-[#FF3F6C]">
+                //   -{discount}%
+                // </span>
+              )}
             </div>
 
             {/* Cart */}

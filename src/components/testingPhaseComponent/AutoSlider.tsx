@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaCartPlus, FaFire } from "react-icons/fa";
 import { Zap } from "lucide-react";
+import { Geist } from "next/font/google";
 
 const reviews = [
   "/images/tsirtImages/nissan2.jpg",
@@ -15,9 +16,19 @@ const reviews = [
   "/images/tsirtImages/nissan2.jpg",
 ];
 
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 function AutoSlider() {
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-items-center px-2  gap-2  md:gap-4 ">
+    <div
+      className={
+        manrope.className +
+        " grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-items-center px-2  gap-2  md:gap-4 "
+      }
+    >
       {reviews.map((image, index) => (
         <motion.div
           key={index}
@@ -26,10 +37,10 @@ function AutoSlider() {
         >
           {/* main white card */}
           <div className="relative flex  flex-col bg-white rounded-3xl ">
-           <div className="absolute left-0  top-0 z-20 flex items-center gap-1 rounded-tl-[26px] bg-[#0D2B18] py-1 pl-3 pr-4 md:py-2.5 md:pl-[22px] md:pr-5 text-[8px] md:text-xs font-bold tracking-wide text-white [clip-path:polygon(0_0,calc(100%-10px)_0,100%_50%,calc(100%-10px)_100%,0_100%)] md:[clip-path:polygon(0_0,calc(100%-12px)_0,100%_50%,calc(100%-12px)_100%,0_100%)]">
-  <FaFire className="text-[10px] md:text-sm text-[#F3B518]" />
-  HOT
-</div>
+            <div className="absolute left-0  top-0 z-20 flex items-center gap-1 rounded-tl-[26px] bg-[#0D2B18] py-1 pl-3 pr-4 md:py-2.5 md:pl-[22px] md:pr-5 text-[8px] md:text-xs font-bold tracking-wide text-white [clip-path:polygon(0_0,calc(100%-10px)_0,100%_50%,calc(100%-10px)_100%,0_100%)] md:[clip-path:polygon(0_0,calc(100%-12px)_0,100%_50%,calc(100%-12px)_100%,0_100%)]">
+              <FaFire className="text-[10px] md:text-sm text-[#F3B518]" />
+              HOT
+            </div>
 
             <div className="relative md:h-[300px] h-[180px] w-full  rounded-t-3xl overflow-hidden bg-[#E6E7DF]">
               <Image
@@ -46,8 +57,8 @@ function AutoSlider() {
             </div>
 
             <div className="flex flex-col  w-full gap-2 md:px-5 px-3 pt-4">
-              <h3 className="md:text-[15px] text-[10px] font-bold text-slate-800 line-clamp-2 ">
-                Men's premium t-shirt-Drop shoulder
+              <h3 className="md:text-[16px] text-[10px] font-bold text-slate-800 line-clamp-2 ">
+                Men&apos;s premium t-shirt-Drop shoulder
               </h3>
 
               <div>
@@ -69,14 +80,14 @@ function AutoSlider() {
             <div className="flex flex-col md:flex-row md:px-5 px-3 md:mb-4 mt-3 mb-4  w-full gap-2 ">
               <motion.button
                 whileTap={{ scale: 0.96 }}
-                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm  bg-gray-900 md:py-2.5 py-1.5 md:text-[10px] text-[9px]  font-semibold text-white transition-colors hover:bg-gray-800"
+                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm  bg-gray-900 md:py-2.5 py-1.5 md:text-[12px] text-[9px]  font-semibold text-white transition-colors hover:bg-gray-800"
               >
                 <FaCartPlus className="md:h-3.5 h-2.5 w-2.5 md:w-3.5" />
                 Add to Cart
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.96 }}
-                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm border-1 border-[#0C943D] bg-white md:py-2.5  py-1.5 md:text-[10px] text-[9px] font-semibold text-[#0C943D] transition-colors hover:bg-[#0C943D] hover:text-white"
+                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm border-1 border-[#0C943D] bg-white md:py-2.5  py-1.5 text-[12px]  font-semibold text-[#0C943D] transition-colors hover:bg-[#0C943D] hover:text-white"
               >
                 <Zap className="md:h-3.5 h-2.5 w-2.5 md:w-3.5" />
                 Buy Now

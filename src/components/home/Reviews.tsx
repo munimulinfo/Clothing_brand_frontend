@@ -4,12 +4,18 @@ import { motion, useAnimationControls, useReducedMotion } from "framer-motion";
 import { Star, UserRound, Quote } from "lucide-react";
 import SectionHeader from "../common/SectionHeader";
 import { useEffect } from "react";
+import { Geist } from "next/font/google";
+
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
 
 const customerReviews = [
   {
     id: 1,
     review:
-      "The fabric quality exceeded my expectations. It's incredibly soft, breathable, and still looks brand new after multiple washes. Definitely my favorite everyday t-shirt.",
+      "The fabric quality exceeded my expectations. It's incredibly soft, breathable. Definitely my favorite everyday t-shirt.",
     name: "Rahim Ahmed",
     role: "Verified Customer",
     rating: 5,
@@ -71,7 +77,7 @@ const Reviews = () => {
     }
   }, [reduceMotion]);
   return (
-    <section className="overflow-hidden">
+    <section className={manrope.className + " overflow-hidden"}>
       <SectionHeader
         badge="Testimonials"
         title="Loved by Our Customers"
@@ -124,14 +130,14 @@ const Reviews = () => {
               </div>
 
               {/* Review */}
-              <p className="mt-6 flex-1 lg:text-[15px] text-[10px] lg:leading-7 leading-4 text-gray-600">
+              <p className="mt-6 flex-1 lg:text-[15px] mb-2 text-[10px] lg:leading-7 leading-4 text-gray-600">
                 {review?.review}
               </p>
 
               {/* Footer */}
               <div className="flex items-center pt-5 justify-between border-t border-gray-200  ">
                 <div className="flex items-center gap-4">
-                  <div className="flex lg:h-14 lg:w-14 h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-green-600 to-emerald-500 text-white shadow-lg">
+                  <div className="flex lg:h-14 lg:w-14 h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-600 to-emerald-500 text-white shadow-lg">
                     <UserRound size={28} />
                   </div>
 

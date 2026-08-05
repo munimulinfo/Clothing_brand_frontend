@@ -1,5 +1,5 @@
 "use client";
-
+import { Geist } from "next/font/google";
 import {
   Mail,
   Phone,
@@ -21,6 +21,11 @@ const QUICK_LINKS = [
   "Contact Us",
 ];
 
+const manrope = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 const SOCIALS = [
   { icon: FaFacebookF, label: "Facebook" },
   { icon: FaInstagram, label: "Instagram" },
@@ -32,13 +37,18 @@ const SOCIALS = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-50 border-t border-gray-200 px-6 pt-12 pb-6 mt-20">
+    <footer
+      className={
+        manrope.className +
+        " w-full bg-gray-50 border-t border-gray-200 px-6 pt-12 pb-6 mt-20"
+      }
+    >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand + links */}
         <div>
           <div className="mb-3 flex items-center gap-2">
             <ShieldCheck className="h-7 w-7 text-emerald-600" />
-            <span className="text-lg font-bold tracking-wide text-gray-900">
+            <span className="text-[17px] font-bold tracking-wide text-gray-900">
               TRUST <span className="text-emerald-600">WEAR</span>
             </span>
           </div>
@@ -184,17 +194,11 @@ const Footer = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <a href="#">
-            Sitemap
-          </a>
+          <a href="#">Sitemap</a>
           <span className="text-gray-600">|</span>
-          <a href="#">
-            Shipping Policy
-          </a>
+          <a href="#">Shipping Policy</a>
           <span className="text-gray-600">|</span>
-          <a href="#">
-            Size Guide
-          </a>
+          <a href="#">Size Guide</a>
         </div>
       </div>
     </footer>

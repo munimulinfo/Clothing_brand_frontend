@@ -117,7 +117,6 @@ const HeroSection = () => {
               }}
               className="group relative full overflow-hidden rounded-[30px] shadow-lg"
             >
-              {/* Image */}
               <Image
                 src={card.image}
                 alt={card.title}
@@ -125,15 +124,12 @@ const HeroSection = () => {
                 className="object-fill transition duration-700 group-hover:scale-110"
               />
 
-              {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent" />
 
-              {/* Top Badge */}
               <div className="absolute left-5 top-5 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
                 NEW
               </div>
 
-              {/* Content */}
               <div className="absolute bottom-3 left-5 right-5">
                 <h3 className="text-2xl font-bold text-white">{card.title}</h3>
 
@@ -147,11 +143,12 @@ const HeroSection = () => {
                 </button>
               </div>
 
-              {/* Hover Border */}
               <div className="absolute inset-0 rounded-[24px] border border-white/0 transition duration-300 group-hover:border-white/30" />
             </motion.div>
           ))}
         </div>
+
+    
       </div>
     </section>
   );
