@@ -77,24 +77,24 @@ const ProductCard = ({
           {/* Price */}
           <div className="flex items-end justify-between">
             <div className="flex items-center gap-2">
-              <span className="lg:text-[22px] text-lg font-extrabold text-black">
-                <span className="font-extrabold text-[16px]">৳</span>
+              <span className="lg:text-[22px] text-sm font-extrabold text-black">
+                <span className="font-extrabold md:text-[16px] text-sm">৳</span>
                 {price}
               </span>
 
               {oldPrice && (
-                <span className="lg:text-[12px] md:mt-1 mt-0.5 text-[9px] text-gray-400 line-through">
+                <span className="lg:text-[13px] md:mt-1 mt-0.5 text-[10px] text-gray-400 line-through">
                   ৳{oldPrice}
                 </span>
               )}
 
               {discount && (
-                <div className=" md:rounded-sm rounded-[3px] bg-[#FF3F6C] md:px-3 px-1.5 px:py-1 py-0.5 lg:text-xs text-[8px] font-bold text-white shadow">
-                  -{discount}%
-                </div>
-                // <span className="lg:text-[12px] mt-1 text-[9px] font-semibold text-[#FF3F6C]">
+                // <div className=" md:rounded-sm rounded-[3px] bg-[#FF3F6C] md:px-3 px-1.5 px:py-1 py-0.5 lg:text-xs text-[8px] font-bold text-white shadow">
                 //   -{discount}%
-                // </span>
+                // </div>
+                <span className="lg:text-[13px] mt-1 text-[10px] font-semibold text-[#FF3F6C]">
+                  -{discount}%
+                </span>
               )}
             </div>
 
