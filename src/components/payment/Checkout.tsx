@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { LucideIcon } from "lucide-react";
+import { ReactNode } from "react";
+
+interface SectionHeadingProps {
+  icon: LucideIcon;
+  children: ReactNode;
+}
 import {
   User,
   MapPin,
@@ -80,7 +87,7 @@ const subtotal = cartItems.reduce(
 );
 const total = subtotal;
 
-const SectionHeading = ({ icon: Icon, children }) => (
+const SectionHeading = ({ icon: Icon, children }: SectionHeadingProps) => (
   <div className="flex items-center gap-2.5">
     <Icon className="h-5 w-5 text-gray-700" />
     <h2 className="font-serif text-xl font-semibold text-gray-900">
