@@ -80,16 +80,16 @@ function AutoSlider() {
             <div className="flex flex-col md:flex-row md:px-5 px-3 md:mb-4 mt-3 mb-4  w-full gap-2 ">
               <motion.button
                 whileTap={{ scale: 0.96 }}
-                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm  bg-gray-900 md:py-2.5 py-1.5 md:text-[12px] text-[9px]  font-semibold text-white transition-colors hover:bg-gray-800"
+                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm  bg-gray-900 md:py-2.5 py-1.5 md:text-[12px] text-[10px] font-semibold text-white transition-colors hover:bg-gray-800"
               >
-                <FaCartPlus className="md:h-3.5 h-2.5 w-2.5 md:w-3.5" />
+                <FaCartPlus className="md:h-3.5 h-3 w-3 md:w-3.5" />
                 Add to Cart
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.96 }}
-                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm border-1 border-[#0C943D] bg-white md:py-2.5  py-1.5 text-[12px]  font-semibold text-[#0C943D] transition-colors hover:bg-[#0C943D] hover:text-white"
+                className="flex lg:flex-1 w-full items-center justify-center gap-1.5 rounded-sm border-1 border-[#0C943D] bg-white md:py-2.5  py-1 md:text-[12px] text-[10px] font-semibold text-[#0C943D] transition-colors hover:bg-[#0C943D] hover:text-white"
               >
-                <Zap className="md:h-3.5 h-2.5 w-2.5 md:w-3.5" />
+                <Zap className="md:h-3.5 h-3 w-3 md:w-3.5" />
                 Buy Now
               </motion.button>
             </div>

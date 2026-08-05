@@ -1,17 +1,42 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { privacySections } from "./privacydata";
 
-const PrivacySidebar = () => {
+const PrivacySidebar = ({
+  setSelectedContent,
+}: {
+  setSelectedContent: React.Dispatch<
+    React.SetStateAction<{ title: string; content: string }>
+  >;
+}) => {
   const [active, setActive] = useState("overview");
+
+  const handleSelectedContent = ({
+    title: title,
+    content,
+    id,
+  }: {
+    title: string;
+    id: string;
+    content: string;
+  }) => {
+    setActive(id);
+    setSelectedContent({ title, content });
+  };
+
+useEffect(() => {
+  if (active === "overview") {
+     setSelectedContent({
+      title: privacySections[0].title,
+      content: privacySections[0].content[0],
+    });
+  }
+}, [active, setSelectedContent]);
 
   return (
     <aside className="hidden lg:block">
       <div className="sticky top-24 rounded-[24px] border border-neutral-200 bg-white p-4 shadow-sm">
-
-        <h3 className="mb-5 px-3 text-lg font-bold">
-          Privacy Topics
-        </h3>
+        <h3 className="mb-5 px-3 text-lg font-bold">Privacy Topics</h3>
 
         <div className="space-y-2">
           {privacySections.map((section) => {
@@ -20,7 +45,13 @@ const PrivacySidebar = () => {
             return (
               <button
                 key={section.id}
-                onClick={() => setActive(section.id)}
+                onClick={() =>
+                  handleSelectedContent({
+                    title: section.title,
+                    content: section.content[0],
+                    id: section.id,
+                  })
+                }
                 className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left transition-all ${
                   active === section.id
                     ? "bg-green-50 text-green-700"
@@ -29,9 +60,7 @@ const PrivacySidebar = () => {
               >
                 <Icon className="h-5 w-5" />
 
-                <span className="font-medium">
-                  {section.title}
-                </span>
+                <span className="font-medium">{section.title}</span>
               </button>
             );
           })}

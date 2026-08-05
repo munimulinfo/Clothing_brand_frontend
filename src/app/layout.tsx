@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat, Roboto,Manrope } from "next/font/google";
+import { Roboto,Manrope,Geist } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
+const montserrat = Geist({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });

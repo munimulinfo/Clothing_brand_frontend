@@ -65,7 +65,7 @@ const Navbar = () => {
                 >
                   <h1
                     className={cn(
-                      "cursor-pointer text-[14px] font-semibold transition-colors",
+                      "cursor-pointer text-[15px] font-semibold transition-colors",
                       active
                         ? "text-emerald-700"
                         : "text-black hover:text-neutral-600",
