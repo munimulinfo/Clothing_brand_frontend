@@ -77,7 +77,7 @@ export function CartSummary({
           <ArrowRight className="h-4 w-4" />
         </Button>
 
-        <Button variant="outline" className="w-full py-5p" onClick={onContinueShopping}>
+        <Button variant="outline" className="w-full py-5" onClick={onContinueShopping}>
           Continue Shopping
         </Button>
 

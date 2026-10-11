@@ -99,8 +99,7 @@ const Navbar = () => {
             <button className="relative transition hover:scale-110">
               <ShoppingCartIcon className="w-7 h-7 mt-1 text-black" />
 
-              {/* Cart Badge */}
-              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white">
+              <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-700 text-[10px] font-bold text-white">
                 5
               </span>
             </button>

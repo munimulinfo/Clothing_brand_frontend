@@ -1,8 +1,6 @@
 "use client";
-
 import { useState } from "react";
 import { X } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,12 +9,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-
-const sizes = ["M", "L", "XL", "2XL"];
+import { useAppDispatch } from "@/redux/hook";
+import { addToCart, CartItem } from "@/redux/featuresSlice/cartItemsSlice";
+const sizes = ["M", "L", "XL", "XXL"];
 
 type AddToCartModalProps = {
   open: boolean;
-  onOpenChange: (open: boolean) => void; // called when user closes (X, overlay click, Esc)
+  onOpenChange: (open: boolean) => void;
   productImage: string;
   productTitle: string;
   onAddToCart?: (size: string) => void;
@@ -31,8 +30,14 @@ const AddToCartModal = ({
 }: AddToCartModalProps) => {
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
 
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = (cartItem: CartItem) => {
+    dispatch(addToCart(cartItem));
+  };
+
   return (
-    <Dialog  open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-md gap-0  overflow-hidden w-[calc(100vw-20px)] lg:w-[calc(100vw)] p-0 [&>button]:hidden">
         {/* Dark header */}
         <div className="relative flex items-center justify-center bg-emerald-700 px-5 py-4">
@@ -58,7 +63,6 @@ const AddToCartModal = ({
           <p className="text-center text-sm font-medium leading-snug">
             {productTitle}
           </p>
-
         </div>
 
         {/* Size selector */}
@@ -86,7 +90,18 @@ const AddToCartModal = ({
         <div className="px-5 pb-5">
           <Button
             disabled={!selectedSize}
-            onClick={() => selectedSize && onAddToCart?.(selectedSize)}
+            onClick={() =>
+              handleAddToCart({
+                productId: "tw2601",
+                name: productTitle,
+                image: productImage,
+                price: 460,
+                oldPrice: 600,
+                quantity: 1,
+                size: selectedSize || "",
+                color: "red",
+              })
+            }
             className="w-full bg-emerald-700 py-6 text-base font-semibold hover:bg-emerald-600"
           >
             Add to Cart

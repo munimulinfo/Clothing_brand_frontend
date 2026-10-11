@@ -1,20 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto,Manrope,Geist } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
+import Providers from "@/lib/providers/Providers";
 
 const montserrat = Geist({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
-});
-export const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full antialiased`}>
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

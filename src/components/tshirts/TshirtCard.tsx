@@ -26,7 +26,7 @@ export function TshirtCard({
       className="group relative border  lg:rounded-none   border-[#DAD4C6] bg-white"
     >
       {/* swing tag discount */}
-      <div className="absolute drop-shadow-xl rounded-r-2xl left-0 top-3 z-10 flex items-center gap-1 bg-[#0C943D] hover:bg-[#0EA845] lg:px-2.5 px-1.5 lg:py-1 py-0.5 text-[#F7F5EE] shadow-sm">
+      <div className="absolute drop-shadow-xl rounded-2xl left-3 top-3 z-10 flex items-center gap-1 bg-[#0C943D] hover:bg-[#0EA845] lg:px-2.5 px-1.5 lg:py-1 py-0.5 text-[#F7F5EE] shadow-sm">
         <span className="font-mono lg:text-xs text-[9px] font-bold">-{discount}%</span>
       </div>
 
@@ -47,7 +47,7 @@ export function TshirtCard({
             {product?.name}
           </h3>
 
-          <div className="mt-2 flex items-baseline gap-2">
+          <div className=" flex flex-wrap items-baseline gap-2">
             <span className="lg:text-lg text-sm font-bold text-gray-900">
               ৳{product.price}
             </span>
