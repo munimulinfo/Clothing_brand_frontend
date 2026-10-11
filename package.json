@@ -1,11 +1,5 @@
 {
   "name": "clothing-brand-frontend",
-  "services": [
-    {
-      "binding": "WORKER_SELF_REFERENCE",
-      "service": "clothing-brand-frontend"
-    }
-  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {
